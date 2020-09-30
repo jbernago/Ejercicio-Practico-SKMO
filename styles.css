@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(#4579b0), color-stop(55%, #2e817b), to(#829506));
+  background: linear-gradient(to right, #4579b0 0%, #2e817b 55%, #829506 100%);
+  padding: 0px 40px;
+}
+
+.nav__logo {
+  width: 10%;
+  letter-spacing: 2px;
+}
+
+.nav__form {
+  width: 43%;
+  position: relative;
+  padding-left: 25px;
+}
+
+.nav__form input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  padding-left: 10px;
+}
+
+.nav__form input::-webkit-input-placeholder {
+  font-size: 18px;
+}
+
+.nav__form input:-ms-input-placeholder {
+  font-size: 18px;
+}
+
+.nav__form input::-ms-input-placeholder {
+  font-size: 18px;
+}
+
+.nav__form input::placeholder {
+  font-size: 18px;
+}
+
+.nav__menu {
+  width: 37%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.nav__menu-lista {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav__menu-lista:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nav__menu-lista-icon {
+  text-decoration: none;
+}
+
+.nav__menu-lista-icon--home::before {
+  content: "\f015";
+  font-size: 28px;
+  text-align: center;
+  display: block;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 25px;
+  font-family: FontAwesome;
+}
+
+.nav__menu-lista-icon--apps::before {
+  content: "\f00a";
+  font-size: 28px;
+  text-align: center;
+  display: block;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 25px;
+  font-family: FontAwesome;
+}
+
+.nav__menu-lista-icon--comunities::before {
+  content: "\f0ac";
+  font-size: 28px;
+  text-align: center;
+  display: block;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 25px;
+  font-family: FontAwesome;
+}
+
+.nav__menu-lista-icon--ever::before {
+  content: "\f0c2";
+  font-size: 28px;
+  text-align: center;
+  display: block;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 25px;
+  font-family: FontAwesome;
+}
+
+.nav__menu-lista-icon:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav__profile {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__profile-bell {
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.nav__profile-bell::before {
+  content: "8";
+  padding-bottom: 3px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  height: 18px;
+  width: 18px;
+  border-radius: 100%;
+  background-color: #B01818;
+  position: absolute;
+  top: -6px;
+  right: -5px;
+}
+
+.nav__profile-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background-image: url("img/perfil.jpg");
+  background-position: center;
+  background-size: cover;
+  border: 2px solid #fff;
+  margin-left: 20px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav__profile-img::after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  font-size: 20px;
+  display: inline-block;
+  position: absolute;
+  right: -19px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+/*# sourceMappingURL=styles.css.map */
