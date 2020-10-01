@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 * {
   font-family: "Source Sans Pro", sans-serif;
-  color: #fff;
 }
 
 body {
   margin: 0;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .nav {
@@ -23,6 +23,7 @@ body {
 .nav__logo {
   width: 10%;
   letter-spacing: 2px;
+  color: #fff;
 }
 
 .nav__form {
@@ -68,60 +69,27 @@ body {
   margin-right: 20px;
 }
 
-.nav__menu-lista:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.nav__menu-lista-icon {
+.nav__menu-icons {
+  color: #fff;
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.nav__menu-lista-icon--home::before {
-  content: "\f015";
-  font-size: 28px;
-  text-align: center;
-  display: block;
-  margin-bottom: 0px;
-  width: 100%;
-  height: 25px;
-  font-family: FontAwesome;
+.nav__menu-icons-icon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 26px;
 }
 
-.nav__menu-lista-icon--apps::before {
-  content: "\f00a";
-  font-size: 28px;
-  text-align: center;
-  display: block;
-  margin-bottom: 0px;
-  width: 100%;
-  height: 25px;
-  font-family: FontAwesome;
-}
-
-.nav__menu-lista-icon--comunities::before {
-  content: "\f0ac";
-  font-size: 28px;
-  text-align: center;
-  display: block;
-  margin-bottom: 0px;
-  width: 100%;
-  height: 25px;
-  font-family: FontAwesome;
-}
-
-.nav__menu-lista-icon--ever::before {
-  content: "\f0c2";
-  font-size: 28px;
-  text-align: center;
-  display: block;
-  margin-bottom: 0px;
-  width: 100%;
-  height: 25px;
-  font-family: FontAwesome;
-}
-
-.nav__menu-lista-icon:hover {
-  color: rgba(255, 255, 255, 0.7);
+.nav__menu-icons:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .nav__profile {
@@ -139,7 +107,6 @@ body {
 
 .nav__profile-bell {
   position: relative;
-  cursor: pointer;
   font-size: 22px;
 }
 
@@ -154,9 +121,14 @@ body {
   width: 18px;
   border-radius: 100%;
   background-color: #B01818;
+  color: #fff;
   position: absolute;
   top: -6px;
   right: -5px;
+}
+
+.nav__profile-bell-icon {
+  color: #fff;
 }
 
 .nav__profile-img {
@@ -175,13 +147,251 @@ body {
 
 .nav__profile-img::after {
   content: "\f0d7";
-  font-family: FontAwesome;
+  font-family: 'Font Awesome 5 Free';
   font-size: 20px;
   display: inline-block;
   position: absolute;
+  color: #fff;
   right: -19px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 28px;
+}
+
+.main .card {
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  position: relative;
+}
+
+.main .card--margin-top {
+  margin-top: 25px;
+}
+
+.main .card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  background-color: #4366A6;
+  color: #fff;
+  height: 55px;
+  border-radius: 5px 5px 0px 0px;
+  padding-left: 60px;
+  position: relative;
+}
+
+.main .card__header-title {
+  position: relative;
+}
+
+.main .card__header-title--events:before {
+  content: "\f073";
+  font-family: 'Font Awesome 5 Free';
+  font-size: 14px;
+  display: inline-block;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main .card__header-title--notifications:before {
+  content: "\f0f3";
+  font-family: 'Font Awesome 5 Free';
+  font-size: 14px;
+  display: inline-block;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main .card__header-title--mails:before {
+  content: "\f0e0";
+  font-family: 'Font Awesome 5 Free';
+  font-size: 14px;
+  display: inline-block;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main .card__header-title--contacts:before {
+  content: "\f0c0";
+  font-family: 'Font Awesome 5 Free';
+  font-size: 14px;
+  display: inline-block;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main .card__header::after {
+  content: "\f142";
+  font-family: 'Font Awesome 5 Free';
+  font-size: 14px;
+  display: inline-block;
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main .card__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5px 45px 0 25px;
+}
+
+.main .card__event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.main .card__event--margin {
+  margin-top: -15px;
+}
+
+.main .card__event-date {
+  color: #4366A6;
+  font-weight: bold;
+}
+
+.main .card__event-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .card__event-hour {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background-color: #4366A6;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px;
+}
+
+.main .card__event-info {
+  padding: 10px 0 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .card__link {
+  color: #4579B0;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.main .card__paragraph {
+  margin-top: 0;
+}
+
+.main .card__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  font-weight: bold;
+  margin-top: 0px;
+  color: #4366A6;
+  height: 55px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.main .card__footer-text {
+  position: relative;
+  cursor: pointer;
+}
+
+.main .card__footer-text::after {
+  content: "\f078";
+  font-family: 'Font Awesome 5 Free';
+  font-size: 14px;
+  display: block;
+  color: #4366A6;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main .left-block {
+  width: 25%;
+  height: 100%;
+  padding: 25px;
+}
+
+.main .center-block {
+  width: 50%;
+  height: 100%;
+  padding: 25px 0;
+}
+
+.main .right-block {
+  width: 25%;
+  height: 100%;
+  padding: 25px;
 }
 /*# sourceMappingURL=styles.css.map */

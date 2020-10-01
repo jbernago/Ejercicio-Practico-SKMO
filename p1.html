@@ -6,38 +6,143 @@
     <title>Ejercicio Práctico SKMO</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <script src="./node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
 </head>
 <body>
 
     <header>
         <nav class="nav">
+            <!-- LOGO WRAPPER -->
             <div class="nav__logo">
                 everis<span style="font-weight: bold;">knowler</span>
             </div>
+            <!-- FORM WRAPPER -->
             <div class="nav__form">
                 <form>
                     <input type="search" placeholder="proyecto skm">
                 </form>
             </div>
+            <!-- MENU WRAPPER -->
             <div class="nav__menu">
                 <ul>
-                    <li class="nav__menu-lista"><a href="#" class="nav__menu-lista-icon nav__menu-lista-icon--home">Home</a></li>
-                    <li class="nav__menu-lista"><a href="#" class="nav__menu-lista-icon nav__menu-lista-icon--apps">Aplicaciones</a></li>
-                    <li class="nav__menu-lista"><a href="#" class="nav__menu-lista-icon nav__menu-lista-icon--comunities">Comunidades</a></li>
-                    <li class="nav__menu-lista"><a href="#" class="nav__menu-lista-icon nav__menu-lista-icon--ever">everPedia</a></li>
+                    <li class="nav__menu-lista"><a href="#" class="nav__menu-icons"><i class="nav__menu-icons-icon fa fa-home"></i>Home</a></li>
+                    <li class="nav__menu-lista"><a href="#" class="nav__menu-icons"><i class="nav__menu-icons-icon fa fa-th"></i>Aplicaciones</a></li>
+                    <li class="nav__menu-lista"><a href="#" class="nav__menu-icons"><i class="nav__menu-icons-icon fa fa-globe"></i>Comunidades</a></li>
+                    <li class="nav__menu-lista"><a href="#" class="nav__menu-icons"><i class="nav__menu-icons-icon fa fa-cloud"></i>everPedia</a></li>
                 </ul> 
             </div>
+            <!-- PROFILE WRAPPER -->
             <div class="nav__profile">
                 <div class="nav__profile-bell">
-                    <i class="fa fa-bell"></i>
+                    <a href="#" class="nav__profile-bell-icon"><i class="fa fa-bell"></i></a>
                 </div>
                 <div class="nav__profile-img"></div>
             </div>
         </nav>
     </header>
 
-    
+    <main class="main">
+        <!-- LEFT BLOCK -->
+        <div class="left-block">
+            <!-- CARD EVENTOS -->
+            <div class="card">
+
+                <div class="card__header">
+                    <p class="card__header-title card__header-title--events">EVENTOS</p>
+                </div>
+
+                <div class="card__body">
+                    <div class="card__event">
+                        <p class="card__event-date">HOY</p>
+                        <div class="card__event-details">
+                            <div class="card__event-hour">11:00</div>
+                            <div class="card__event-info">
+                                <a href="#" class="card__link">SKM Wireframes checkpoint</a>
+                                <p class="card__paragraph">11:00 a 12:00 - Sala 446</p>
+                            </div>
+                        </div>
+                        <div class="card__event-details">
+                            <div class="card__event-hour">13:00</div>
+                            <div class="card__event-info">
+                                <a href="#" class="card__link">SKM chill out</a>
+                                <p class="card__paragraph">13:00 a 13:40 - Sala 446</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__event card__event--margin">
+                        <p class="card__event-date">MAÑANA</p>
+                        <div class="card__event-details">
+                            <div class="card__event-hour">11:00</div>
+                            <div class="card__event-info">
+                                <a href="#" class="card__link">SKM Wireframes check</a>
+                                <p class="card__paragraph">11:00 a 12:00 - Sala 446</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="card__body-title">
+
+                    </p>
+                </div>
+
+                <div class="card__footer">
+                    <p class="card__footer-text">Ver más</p>
+                </div>
+            </div>
+
+            <!-- CARD NOTIFICACIONES -->
+            <div class="card card--margin-top">
+
+                <div class="card__header">
+                    <p class="card__header-title card__header-title--notifications">NOTIFICACIONES</p>
+                </div>
+
+                <div class="card__body">
+
+                </div>
+
+                <div class="card__footer">
+                    <p class="card__footer-text">Ver más</p>
+                </div>
+            </div>
+            
+
+
+
+        </div>
+        <!-- CENTER BLOCK -->
+        <div class="center-block">
+            <div class="card">
+                <div class="card__header">
+                    <p class="card__header-title card__header-title--mails">MAILS</p>
+                </div>
+
+                <div class="card__body">
+
+                </div>
+
+                <div class="card__footer">
+                    <p class="card__footer-text">Ver más</p>
+                </div>
+            </div>
+        </div>
+        <!-- RIGHT BLOCK -->
+        <div class="right-block">
+            <div class="card">
+                <div class="card__header">
+                    <p class="card__header-title card__header-title--contacts">MIS CONTACTOS</p>
+                </div>
+
+                <div class="card__body">
+
+                </div>
+
+                <div class="card__footer">
+                    <p class="card__footer-text">Ver más</p>
+                </div>
+            </div>
+        </div>
+    </main>
     
 </body>
 </html>
