@@ -81,15 +81,15 @@ body {
           flex-direction: column;
 }
 
+.nav__menu-icons:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .nav__menu-icons-icon {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   font-size: 26px;
-}
-
-.nav__menu-icons:hover {
-  color: rgba(255, 255, 255, 0.8);
 }
 
 .nav__profile {
@@ -167,6 +167,24 @@ body {
   padding-top: 28px;
 }
 
+.main .left-block {
+  width: 25%;
+  height: 100%;
+  padding: 25px;
+}
+
+.main .center-block {
+  width: 50%;
+  height: 100%;
+  padding: 25px 0;
+}
+
+.main .right-block {
+  width: 25%;
+  height: 100%;
+  padding: 25px;
+}
+
 .main .card {
   background-color: white;
   border-radius: 5px;
@@ -196,58 +214,6 @@ body {
   position: relative;
 }
 
-.main .card__header-title {
-  position: relative;
-}
-
-.main .card__header-title--events:before {
-  content: "\f073";
-  font-family: 'Font Awesome 5 Free';
-  font-size: 14px;
-  display: inline-block;
-  position: absolute;
-  left: -30px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.main .card__header-title--notifications:before {
-  content: "\f0f3";
-  font-family: 'Font Awesome 5 Free';
-  font-size: 14px;
-  display: inline-block;
-  position: absolute;
-  left: -30px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.main .card__header-title--mails:before {
-  content: "\f0e0";
-  font-family: 'Font Awesome 5 Free';
-  font-size: 14px;
-  display: inline-block;
-  position: absolute;
-  left: -30px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.main .card__header-title--contacts:before {
-  content: "\f0c0";
-  font-family: 'Font Awesome 5 Free';
-  font-size: 14px;
-  display: inline-block;
-  position: absolute;
-  left: -30px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
 .main .card__header::after {
   content: "\f142";
   font-family: 'Font Awesome 5 Free';
@@ -262,15 +228,86 @@ body {
           transform: translateY(-50%);
 }
 
-.main .card__body {
+.main .card__header-title {
+  position: relative;
+}
+
+.main .card__header-title::before {
+  content: "";
+  font-family: 'Font Awesome 5 Free';
+  font-size: 14px;
+  display: inline-block;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main .card__header-title--events:before {
+  content: "\f073";
+}
+
+.main .card__header-title--notifications:before {
+  content: "\f0f3";
+}
+
+.main .card__header-title--mails:before {
+  content: "\f0e0";
+}
+
+.main .card__header-title--contacts:before {
+  content: "\f0c0";
+}
+
+.main .card__link {
+  color: #4579B0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.main .card__paragraph {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.main .card__tab {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 5px 45px 0 25px;
+  background-color: #E3E8F2;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .card__tab-wrapper {
+  width: 100%;
+  padding: 0 20px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10px;
+}
+
+.main .card__tab-menu {
+  display: inline;
+  list-style: none;
+}
+
+.main .card__tab-links {
+  color: #4366A6;
+  text-decoration: none;
+}
+
+.main .card__tab-links--active {
+  font-weight: bold;
 }
 
 .main .card__event {
@@ -281,23 +318,34 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0;
-  margin: 0;
+  padding: 12px 45px 0px 25px;
 }
 
-.main .card__event--margin {
-  margin-top: -15px;
+.main .card__event--last {
+  margin-bottom: 15px;
 }
 
 .main .card__event-date {
   color: #4366A6;
   font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.main .card__event-date--last {
+  margin-top: 0;
+  margin-bottom: 9px;
 }
 
 .main .card__event-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 5px;
+}
+
+.main .card__event-details--second {
+  margin-top: 25px;
 }
 
 .main .card__event-hour {
@@ -319,7 +367,6 @@ body {
 }
 
 .main .card__event-info {
-  padding: 10px 0 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,17 +374,76 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 10px;
+  padding-top: 4px;
 }
 
-.main .card__link {
-  color: #4579B0;
-  font-size: 15px;
+.main .card__notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 14px 25px 15px 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main .card__notification-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .card__notification-info {
+  width: 70%;
+}
+
+.main .card__notification-title {
   font-weight: bold;
-  text-decoration: underline;
+  color: #636363;
+  text-decoration: none;
 }
 
-.main .card__paragraph {
-  margin-top: 0;
+.main .card__notification-deadline {
+  position: relative;
+  margin-left: 20px;
+}
+
+.main .card__notification-deadline::before {
+  content: "\f0e0";
+  font-family: 'Font Awesome 5 Free';
+  font-size: 14px;
+  display: inline-block;
+  position: absolute;
+  left: -20px;
+  color: #f5a623;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main .card__notification-icon {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #A8B061;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 20px;
+}
+
+.main .card__contactos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .main .card__footer {
@@ -353,9 +459,7 @@ body {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
   font-weight: bold;
-  margin-top: 0px;
   color: #4366A6;
-  height: 55px;
   border-radius: 0px 0px 5px 5px;
 }
 
@@ -375,23 +479,5 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-.main .left-block {
-  width: 25%;
-  height: 100%;
-  padding: 25px;
-}
-
-.main .center-block {
-  width: 50%;
-  height: 100%;
-  padding: 25px 0;
-}
-
-.main .right-block {
-  width: 25%;
-  height: 100%;
-  padding: 25px;
 }
 /*# sourceMappingURL=styles.css.map */

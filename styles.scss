@@ -55,28 +55,25 @@ body {
         width: 37%;
         display: flex;
         padding: 0;
-
-        &-lista {
-            display: inline-block;
-            margin-right: 20px;
-        }
-        &-icons {
+    }
+    &__menu-lista {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    &__menu-icons {
             color: $blanco;
             text-decoration: none;
             display: flex;
             flex-direction: column;
 
-            &-icon{
-                align-self: center;
-                font-size: 26px;
-            }
-
-
             &:hover {
                 color: rgba($blanco, 0.8);
             }
-        }
     }
+    &__menu-icons-icon{
+        align-self: center;
+        font-size: 26px;
+    }   
 
     // CONTENEDOR PROFILE
     &__profile {
@@ -84,58 +81,58 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    &__profile-bell {
+        position: relative;
+        font-size: 22px;
 
-        &-bell {
-            position: relative;
-            font-size: 22px;
+        &::before {
+            content: "8";
+            padding-bottom: 3px;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            height: 18px;
+            width: 18px;
+            border-radius: 100%;
+            background-color: #B01818;
+            color: $blanco;
+            position: absolute;
+            top: -6px;
+            right: -5px;
 
-            &::before {
-                content: "8";
-                padding-bottom: 3px;
-                display: block;
-                text-align: center;
-                font-weight: bold;
-                font-size: 15px;
-                height: 18px;
-                width: 18px;
-                border-radius: 100%;
-                background-color: #B01818;
-                color: $blanco;
-                position: absolute;
-                top: -6px;
-                right: -5px;
-
-            }
-
-            &-icon {
-                color: $blanco;
-            }
         }
 
-        &-img {
-            width: 35px;
-            height: 35px;
-            border-radius: 100%;
-            background-image: url("img/perfil.jpg");
-            background-position: center;
-            background-size: cover;
-            border: 2px solid $blanco;
-            margin-left: 20px;
+        
+    }
+    &__profile-bell-icon {
+        color: $blanco;
+    }
+    &__profile-img {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        background-image: url("img/perfil.jpg");
+        background-position: center;
+        background-size: cover;
+        border: 2px solid $blanco;
+        margin-left: 20px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+// NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO SSSSSSSSSSAAAAAAAAAAALEEEEEEEEEEEEEEEEEEEE
+// SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+        &::after {
+            content: "\f0d7";
+            font-family: 'Font Awesome 5 Free';
+            font-size: 20px;
             display: inline-block;
-            position: relative;
-            cursor: pointer;
-
-            &::after {
-                content: "\f0d7";
-                font-family: 'Font Awesome 5 Free';
-                font-size: 20px;
-                display: inline-block;
-                position: absolute;
-                color: $blanco;
-                right: -19px;
-                top: 50%;
-                transform: translateY(-50%);
-            }
+            position: absolute;
+            color: $blanco;
+            right: -19px;
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
 }
@@ -149,7 +146,27 @@ body {
     $altura: 100%;
     $padding: 25px;
 
+    // GRILLA
+    .left-block {
+        width: 25%;
+        height: $altura;
+        padding: $padding;
 
+    }
+    .center-block {
+        width: 50%;
+        height: $altura;
+        padding: 25px 0;
+    }
+    .right-block {
+        width: 25%;
+        height: $altura;
+        padding: $padding;
+    }
+
+
+
+    // BLOQUE CARD
     .card {
         background-color: white;
         border-radius: 5px;
@@ -173,51 +190,6 @@ body {
             padding-left: 60px;
             position: relative;
 
-            &-title {
-                position: relative;
-                
-                &--events:before{
-                    content: "\f073";
-                    font-family: 'Font Awesome 5 Free';
-                    font-size: 14px;
-                    display: inline-block;
-                    position: absolute;
-                    left: -30px;
-                    top:50%;
-                    transform: translateY(-50%);
-                }
-                &--notifications:before{
-                    content: "\f0f3";
-                    font-family: 'Font Awesome 5 Free';
-                    font-size: 14px;
-                    display: inline-block;
-                    position: absolute;
-                    left: -30px;
-                    top:50%;
-                    transform: translateY(-50%);
-                }
-                &--mails:before{
-                    content: "\f0e0";
-                    font-family: 'Font Awesome 5 Free';
-                    font-size: 14px;
-                    display: inline-block;
-                    position: absolute;
-                    left: -30px;
-                    top:50%;
-                    transform: translateY(-50%);
-                }
-                &--contacts:before{
-                    content: "\f0c0";
-                    font-family: 'Font Awesome 5 Free';
-                    font-size: 14px;
-                    display: inline-block;
-                    position: absolute;
-                    left: -30px;
-                    top:50%;
-                    transform: translateY(-50%);
-                }
-            }
-
             &::after {
                 content: "\f142";
                 font-family: 'Font Awesome 5 Free';
@@ -230,29 +202,110 @@ body {
                 top: 50%;
                 transform: translateY(-50%);
             }
+
         }
+
+        &__header-title {
+            position: relative;
+
+            &::before{
+                content: "";
+                font-family: 'Font Awesome 5 Free';
+                font-size: 14px;
+                display: inline-block;
+                position: absolute;
+                left: -30px;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            
+            &--events:before{
+                content: "\f073";
+            }
+            &--notifications:before{
+                content: "\f0f3";
+            }
+            &--mails:before{
+                content: "\f0e0";
+            }
+            &--contacts:before{
+                content: "\f0c0";
+            }
+
+        }
+
+        
+        
 
         // CARD BODY
         &__body{
-            display: flex;
-            flex-direction: column;
-            padding: 5px 45px 0 25px;
+            
         }
+        // REUTILIZABLES
+        &__link{
+            color: #4579B0;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        &__paragraph{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        &__tab{
+            display: flex;
+            background-color: #E3E8F2;
+            justify-content: center;
+        }
+        &__tab-wrapper{
+            width: 100%;
+            padding: 0 20px 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 10px;
+        }
+        &__tab-menu{
+            display: inline;
+            list-style: none;
+        }
+        &__tab-links{
+            color: $azul;
+            text-decoration: none;
+
+            &--active{
+                font-weight: bold;
+            }
+        }
+
+        // ELEMENTO EVENT
         &__event{
             display: flex;
             flex-direction: column;
-            padding: 0;
-            margin: 0;
+            padding: 12px 45px 0px 25px;
+
+            &--last{
+                margin-bottom: 15px;
+            }
         }
-        &__event--margin{
-            margin-top: -15px;
-        }
+        
         &__event-date{
             color: $azul;
             font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 6px;
+
+            &--last{
+                margin-top: 0;
+                margin-bottom: 9px;
+            }
         }
         &__event-details{
             display: flex;
+            margin-top:5px;
+
+            &--second{
+                margin-top: 25px;
+            }
         }
         &__event-hour{
             width: 45px;
@@ -266,22 +319,64 @@ body {
             padding: 2px;
         }
         &__event-info{
-            padding: 10px 0 0 10px;
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+            padding-top: 4px;
+        }
+
+        // ELEMENTO NOTIFICATION
+        &__notification{
+            display: flex;
+            flex-direction: column;
+            padding: 14px 25px 15px 25px;
+            border-bottom: 1px solid rgba(#000000, 0.1);
+        }
+        &__notification-details{
+            display: flex;
+        }
+        &__notification-info{
+            width: 70%;
+        }
+        &__notification-title{
+            font-weight: bold; 
+            color: #636363; 
+            text-decoration: none;
+        }
+        &__notification-deadline{
+            position: relative;
+            margin-left: 20px;
+            
+            &::before{
+                content: "\f0e0";
+                font-family: 'Font Awesome 5 Free';
+                font-size: 14px;
+                display: inline-block;
+                position: absolute;
+                left: -20px;
+                color: #f5a623;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            
+        }
+        &__notification-icon{
+            width: 30%;
+            display: flex;
+            color: #A8B061;
+            justify-content: flex-end;
+            font-size: 20px;
+        }
+
+        // ELEMENTO CONTACTOS
+        &__contactos{
             display: flex;
             flex-direction: column;
         }
-        &__link{
-            color: #4579B0;
-            font-size: 15px;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        &__paragraph{
-            margin-top: 0;
-        }
+        
+        
 
         // CARD FOOTER
-
         &__footer {
             display: flex;
             justify-content: center;
@@ -289,52 +384,27 @@ body {
             border-top: 1px solid rgba(#000000, 0.1);
             width: 100%;
             font-weight: bold;
-            margin-top: 0px;
             color: $azul;
-            height: 55px;
             border-radius: 0px 0px 5px 5px;
+        }
+        &__footer-text {
+            position: relative;
+            cursor: pointer;
 
-            &-text {
-                position: relative;
-                cursor: pointer;
-
-                &::after {
-                    content: "\f078";
-                    font-family: 'Font Awesome 5 Free';
-                    font-size: 14px;
-                    display: block;
-                    color: $azul;
-                    position: absolute;
-                    right: -20px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
+            &::after {
+                content: "\f078";
+                font-family: 'Font Awesome 5 Free';
+                font-size: 14px;
+                display: block;
+                color: $azul;
+                position: absolute;
+                right: -20px;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
-
-    }
-
+        
 
 
-
-
-
-    .left-block {
-        width: 25%;
-        height: $altura;
-        padding: $padding;
-
-    }
-
-    .center-block {
-        width: 50%;
-        height: $altura;
-        padding: 25px 0;
-    }
-
-    .right-block {
-        width: 25%;
-        height: $altura;
-        padding: $padding;
     }
 }
