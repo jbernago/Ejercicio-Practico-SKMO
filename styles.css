@@ -22,10 +22,18 @@ body {
   padding: 0 40px;
 }
 
+.nav__hamburguer {
+  display: none;
+}
+
 .nav__logo {
   width: 10%;
   letter-spacing: 2px;
   color: #fff;
+}
+
+.nav__logo-responsive {
+  display: none;
 }
 
 .nav__form {
@@ -56,6 +64,24 @@ body {
 
 .nav__form input::placeholder {
   font-size: 18px;
+}
+
+.nav__form::after {
+  content: "\f002";
+  font-family: 'Font Awesome 5 Free';
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  position: absolute;
+  color: #d8d8d8;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.nav__search {
+  display: none;
 }
 
 .nav__menu {
@@ -162,6 +188,147 @@ body {
           transform: translateY(-50%);
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .nav {
+    padding: 0px 25px;
+  }
+  .nav__logo {
+    width: 10%;
+  }
+  .nav__menu {
+    width: 43%;
+  }
+  .nav__form {
+    width: 37%;
+    position: relative;
+    padding-left: 33px;
+  }
+  .nav__profile {
+    width: 10%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 10px;
+  }
+  .nav__profile-img {
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .nav {
+    padding: 20px 15px;
+  }
+  .nav__hamburguer {
+    width: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    font-size: 25px;
+  }
+  .nav__hamburguer-icon {
+    color: #fff;
+  }
+  .nav__logo {
+    width: 22%;
+    padding-left: 15px;
+  }
+  .nav__menu {
+    display: none;
+  }
+  .nav__form {
+    width: 53%;
+    position: relative;
+    padding-left: 28px;
+  }
+  .nav__profile {
+    width: 20%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 10px;
+  }
+  .nav__profile-img {
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+  .nav {
+    padding: 0 15px;
+  }
+  .nav__hamburguer {
+    width: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    font-size: 25px;
+  }
+  .nav__hamburguer-icon {
+    color: #fff;
+  }
+  .nav__logo {
+    display: none;
+  }
+  .nav__logo-responsive {
+    width: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 7px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+  }
+  .nav__logo-responsive-img {
+    width: 45px;
+    height: 45px;
+  }
+  .nav__form {
+    display: none;
+  }
+  .nav__search {
+    width: 35%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 20px;
+    color: #fff;
+    padding-right: 5px;
+  }
+  .nav__menu {
+    display: none;
+  }
+  .nav__profile {
+    width: 35%;
+  }
+  .nav__profile-img {
+    margin-left: 15px;
+  }
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,16 +344,76 @@ body {
   padding: 23px 6px 25px 24px;
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .main .left-block {
+    width: 33.3%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .main .left-block {
+    width: 50%;
+    padding: 5px 10px 0px 15px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+  .main .left-block {
+    width: 100%;
+    padding: 5px 15px 0px 15px;
+  }
+}
+
 .main .center-block {
   width: 50%;
   height: 100%;
   padding: 23px 18px 25px 18px;
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .main .center-block {
+    width: 33.3%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .main .center-block {
+    width: 50%;
+    padding: 5px 15px 0px 10px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+  .main .center-block {
+    width: 100%;
+    padding: 30px 15px 0px 15px;
+  }
+}
+
 .main .right-block {
   width: 25%;
   height: 100%;
   padding: 23px 24px 25px 5px;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .main .right-block {
+    width: 33.3%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .main .right-block {
+    width: 50%;
+    padding: 5px 10px 0px 15px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+  .main .right-block {
+    width: 100%;
+    padding: 30px 15px 30px 15px;
+  }
 }
 
 .main .card {
@@ -213,6 +440,7 @@ body {
   background-color: #4366A6;
   color: #fff;
   height: 55px;
+  max-width: 100%;
   border-radius: 5px 5px 0px 0px;
   padding-left: 55px;
   position: relative;
@@ -272,18 +500,18 @@ body {
   font-weight: bold;
 }
 
+.main .card .ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
 .main .card__link {
   color: #4579B0;
   font-weight: bold;
   text-decoration: underline;
   display: inline-block;
-}
-
-.main .card__link--ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
 }
 
 .main .card__paragraph {
@@ -469,6 +697,24 @@ body {
           transform: translateY(-50%);
 }
 
+.main .card__notification-deadline--no-icon::before {
+  content: "";
+}
+
+.main .card__notification-deadline--overdue::before {
+  content: "\f071";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  position: absolute;
+  left: -20px;
+  color: #c43333;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .main .card__notification-icon {
   width: 30%;
   display: -webkit-box;
@@ -479,6 +725,44 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   font-size: 20px;
+}
+
+.main .card__notification-check {
+  display: none;
+}
+
+.main .card__notification-check-label::before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #d8d8d8;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.main .card__notification-check:checked + .card__notification-check-label::before {
+  content: "\2714";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #A8B061;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
 }
 
 .main .card__mails {
@@ -584,7 +868,7 @@ body {
 }
 
 .main .card__scroll::-webkit-scrollbar-thumb {
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
   border-radius: 100px;
 }
 
@@ -671,41 +955,5 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
-  .main .left-block {
-    width: 33.3%;
-  }
-  .main .center-block {
-    width: 33.3%;
-  }
-  .main .right-block {
-    width: 33.3%;
-  }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 1023px) {
-  .main .left-block {
-    width: 50%;
-  }
-  .main .center-block {
-    width: 50%;
-  }
-  .main .right-block {
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 599px) {
-  .main .left-block {
-    width: 100%;
-  }
-  .main .center-block {
-    width: 100%;
-  }
-  .main .right-block {
-    width: 100%;
-  }
 }
 /*# sourceMappingURL=styles.css.map */

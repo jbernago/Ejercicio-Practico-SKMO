@@ -13,15 +13,24 @@
 
     <header>
         <nav class="nav">
+            <div class="nav__hamburguer">
+                <a class="nav__hamburguer-icon" href="#"><i class="fa fa-bars"></i></a>
+            </div>
             <!-- LOGO WRAPPER -->
             <div class="nav__logo">
                 everis<span style="font-weight: bold;">knowler</span>
+            </div>
+            <div class="nav__logo-responsive">
+                <a href="#"><img class="nav__logo-responsive-img" src="img/logo-responsive1.png" alt=""></a>
             </div>
             <!-- FORM WRAPPER -->
             <div class="nav__form">
                 <form>
                     <input type="search" placeholder="proyecto skm">
                 </form>
+            </div>
+            <div class="nav__search">
+                <i class="fa fa-search"></i>
             </div>
             <!-- MENU WRAPPER -->
             <div class="nav__menu">
@@ -103,7 +112,10 @@
                                 <small class="card__notification-deadline">Deadline 19/06</small>
                             </div>
                             <div class="card__notification-icon">
-                                <i class="fa fa-check-square"></i>
+                                <form>
+                                    <input type="checkbox" id="checkbox1" class="card__notification-check" checked>
+                                    <label class="card__notification-check-label" for="checkbox1"></label>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -112,10 +124,13 @@
                             <div class="card__notification-info">
                                 <a href="#" class="card__notification-title">Actualizar documentos</a>
                                 <p class="card__paragraph">SKM: intranet inteligente</p>
-                                <small class="card__notification-deadline">Deadline 19/06</small>
+                                <small class="card__notification-deadline card__notification-deadline--no-icon">Deadline 19/06</small>
                             </div>
                             <div class="card__notification-icon">
-                                <i class="fa fa-check-square"></i>
+                                <form>
+                                    <input type="checkbox" id="checkbox2" class="card__notification-check">
+                                    <label class="card__notification-check-label" for="checkbox2"></label>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -124,10 +139,13 @@
                             <div class="card__notification-info">
                                 <a href="#" class="card__notification-title">Actualizar documentos</a>
                                 <p class="card__paragraph">SKM: intranet inteligente</p>
-                                <small class="card__notification-deadline">Deadline 19/06</small>
+                                <small class="card__notification-deadline card__notification-deadline--overdue">Overdue 27/05</small>
                             </div>
                             <div class="card__notification-icon">
-                                <i class="fa fa-check-square"></i>
+                                <form>
+                                    <input type="checkbox" id="checkbox3" class="card__notification-check">
+                                    <label class="card__notification-check-label" for="checkbox3"></label>
+                                </form>
                             </div>
                         </div>
                     </div>                    
@@ -162,7 +180,7 @@
                                 </div>
                             </div>
                             <div class="card__mail-data">
-                                <a class="card__link card__link--ellipsis">Nuevas versiones de las pantallas</a>
+                                <a class="card__link ellipsis">Nuevas versiones de las pantallas</a>
                                 <div class="card__paragraph">Hola equipo, aquí tenéis las actualizaciones de las pantallas que
                                     comentamos el otro día. Pero si tenéis cualquier duda me podéis escribir por email o me
                                     llamáis a mi móvil.
@@ -178,7 +196,7 @@
                                 </div>
                             </div>
                             <div class="card__mail-data">
-                                <a class="card__link card__link--ellipsis">Nuevos datos password (Invision/Zeplin)</a>
+                                <a class="card__link ellipsis">Nuevos datos password (Invision/Zeplin)</a>
                                 <div class="card__paragraph">Hola equipo, aquí van las actualizaciones de las pantallas que
                                     comentamos día de la reunión pasada. Si tenéis cualquier duda me escribís un correo os
                                     responfo lo antes posible.
@@ -194,7 +212,7 @@
                                 </div>
                             </div>
                             <div class="card__mail-data">
-                                <a class="card__link card__link--ellipsis">Nuevas versiones de las pantallas</a>
+                                <a class="card__link ellipsis">Nuevas versiones de las pantallas</a>
                                 <div class="card__paragraph">Hola equipo, aquí van las actualizaciones de las pantallas que
                                     comentamos día de la reunión pasada. Si tenéis cualquier duda me escribís un correo os
                                     responfo lo antes posible.
@@ -219,9 +237,9 @@
                     <div class="card__projects">
                         <div class="card__tab">
                             <ul class="card__tab-wrapper card__tab-wrapper--text-start">
-                                <li class="card__tab-menu card__tab-menu--active bold"><a href="#" class="card__tab-links card__tab-links--active">En curso</a></li>
-                                <li class="card__tab-menu"><a href="#" class="card__tab-links">Relacionados</a></li>
-                                <li class="card__tab-menu"><a href="#" class="card__tab-links">Cerrados</a></li>
+                                <li class="card__tab-menu card__tab-menu--active bold ellipsis"><a href="#" class="card__tab-links card__tab-links--active">En curso</a></li>
+                                <li class="card__tab-menu ellipsis"><a href="#" class="card__tab-links">Relacionados</a></li>
+                                <li class="card__tab-menu ellipsis"><a href="#" class="card__tab-links">Cerrados</a></li>
                             </ul>
                         </div>
                         <div class="card__project-wrapper">
@@ -230,7 +248,7 @@
                                 <p class="card__paragraph">Proyecto interno</p>
                                 <div class="card__project-pills">
                                     <p class="card__pill">Intranet</p>
-                                    <p class="card__pill">Buscador inteligente</p>
+                                    <p class="card__pill ellipsis">Buscador inteligente</p>
                                     <p class="card__pill card__pill--outline">+2</p>
                                 </div>
                             </div>
@@ -239,7 +257,7 @@
                                 <p class="card__paragraph">Proyecto interno</p>
                                 <div class="card__project-pills">
                                     <p class="card__pill">Intranet</p>
-                                    <p class="card__pill">Buscador inteligente</p>
+                                    <p class="card__pill ellipsis">Buscador inteligente</p>
                                     <p class="card__pill card__pill--outline">+2</p>
                                 </div>
                             </div>
@@ -248,7 +266,7 @@
                                 <p class="card__paragraph">Proyecto interno</p>
                                 <div class="card__project-pills">
                                     <p class="card__pill">Intranet</p>
-                                    <p class="card__pill">Buscador inteligente</p>
+                                    <p class="card__pill ellipsis">Buscador inteligente</p>
                                     <p class="card__pill card__pill--outline">+2</p>
                                 </div>
                             </div>

@@ -3,9 +3,10 @@
 
 // VARIABLES
 $blanco: #fff;
+$gris: #d8d8d8;
+$azul: #4366A6;
 $fuente: 'Source Sans Pro',
 sans-serif;
-$azul: #4366A6;
 $bshadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 
 * {
@@ -25,14 +26,23 @@ body {
     background: linear-gradient(to right, rgba(69, 121, 176, 1) 0%, rgba(46, 129, 123, 1) 55%, rgba(130, 149, 6, 1) 100%);
     padding: 0 40px;
 
+
+    // CONTENEDOR HAMBURGUER
+    &__hamburguer{
+        display: none;
+    }
+
     // CONTENEDOR LOGO
     &__logo {
         width: 10%;
         letter-spacing: 2px;
         color: $blanco;
     }
+    &__logo-responsive{
+        display: none;
+    }
 
-    // CONTENEDOR INPUT
+    // CONTENEDOR INPUT Y SEARCH
     &__form {
         width: 43%;
         position: relative;
@@ -49,6 +59,23 @@ body {
                 font-size: 18px;
             }
         }
+
+        &::after{
+            content: "\f002";
+            font-family: 'Font Awesome 5 Free';
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            color: $gris;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__search{
+        display: none;
     }
 
     // CONTENEDOR MENU 
@@ -137,6 +164,153 @@ body {
             transform: translateY(-50%);
         }
     }
+
+
+
+    @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+        padding: 0px 25px;
+
+
+        // CONTENEDOR LOGO
+        &__logo {
+            width: 10%;
+        }
+
+        // CONTENEDOR MENU 
+        &__menu {
+            width: 43%;
+        }
+
+        // CONTENEDOR INPUT Y SEARCH
+        &__form {
+            width: 37%;
+            position: relative;
+            padding-left: 33px;
+        }
+
+        // CONTENEDOR PROFILE
+        &__profile {
+            width: 10%;
+            justify-content: flex-end;
+            padding-right: 10px;
+        }
+        &__profile-img {
+            margin-left: 15px;
+        }
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 1023px) {
+        padding: 20px 15px;
+
+        //CONTENEDOR HAMBURGUER
+        &__hamburguer{
+            width: 5%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: $blanco;
+            font-size: 25px;
+        }
+        &__hamburguer-icon{
+            color: $blanco;
+        }
+
+        // CONTENEDOR LOGO
+        &__logo {
+            width: 22%;
+            padding-left: 15px;
+        }
+
+        // CONTENEDOR MENU 
+        &__menu {
+            display: none;
+        }
+
+        // CONTENEDOR INPUT Y SEARCH
+        &__form {
+            width: 53%;
+            position: relative;
+            padding-left: 28px;
+        }
+
+        // CONTENEDOR PROFILE
+        &__profile {
+            width: 20%;
+            justify-content: flex-end;
+            padding-right: 10px;
+        }
+        &__profile-img {
+            margin-left: 15px;
+        }
+       
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 599px) {
+        padding: 0 15px;
+
+        //CONTENEDOR HAMBURGUER
+        &__hamburguer{
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $blanco;
+            font-size: 25px;
+        }
+        &__hamburguer-icon{
+            color: $blanco;
+        }
+
+        // CONTENEDOR LOGO
+        &__logo {
+            display: none;
+        }
+        &__logo-responsive{
+            width: 20%;
+            display: flex;
+            justify-content: flex-start;
+            padding-top: 7px;
+            padding-bottom: 4px;
+            padding-left: 10px;
+            
+        }
+        &__logo-responsive-img{
+            width: 45px;
+            height: 45px;
+        }
+
+        // CONTENEDOR INPUT Y SEARCH
+        &__form {
+            display: none;
+        }
+
+        &__search{
+            width: 35%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 20px;
+            color: $blanco;
+            padding-right: 5px;
+        }
+
+        // CONTENEDOR MENU 
+        &__menu {
+            display: none;
+        }
+        
+
+        // CONTENEDOR PROFILE
+        &__profile {
+            width: 35%;
+        }
+        &__profile-img {
+            margin-left: 15px;
+        }
+
+    }
+
+
 }
 
 
@@ -146,23 +320,67 @@ body {
     flex-wrap: wrap;
     padding-top: 28px;
     $altura: 100%;
-
+    
     // GRILLA
     .left-block {
         width: 25%;
         height: $altura;
         padding: 23px 6px 25px 24px;
 
+        @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+            width: 33.3%;
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 1023px) {
+            width: 50%;
+            padding: 5px 10px 0px 15px;
+        }
+
+        @media only screen and (min-width: 320px) and (max-width: 599px) {
+            width: 100%;
+            padding: 5px 15px 0px 15px;
+        }
+
     }
     .center-block {
         width: 50%;
         height: $altura;
         padding: 23px 18px 25px 18px;
+
+        @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+            width: 33.3%;
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 1023px) {
+            width: 50%;
+            padding: 5px 15px 0px 10px;
+        }
+
+        @media only screen and (min-width: 320px) and (max-width: 599px) {
+            width: 100%;
+            padding: 30px 15px 0px 15px;
+        }
+
     }
     .right-block {
         width: 25%;
         height: $altura;
         padding: 23px 24px 25px 5px;
+
+        @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+            width: 33.3%;
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 1023px) {
+             width: 50%;
+             padding: 5px 10px 0px 15px;
+        }
+
+        @media only screen and (min-width: 320px) and (max-width: 599px) {
+            width: 100%;
+            padding: 30px 15px 30px 15px;
+        }
+
     }
 
 
@@ -187,6 +405,7 @@ body {
             background-color: $azul;
             color: $blanco;
             height: 55px;
+            max-width: 100%;
             border-radius: 5px 5px 0px 0px;
             padding-left: 55px;
             position: relative;
@@ -247,19 +466,17 @@ body {
         .bold{
             font-weight: bold;
         }
+        .ellipsis{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
         &__link{
             color: #4579B0;
             font-weight: bold;
             text-decoration: underline;
             display: inline-block;
-
-            &--ellipsis{
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                max-width: 100%;
-            }
-
         }
         &__paragraph{
             margin-top: 0;
@@ -395,6 +612,23 @@ body {
                 top:50%;
                 transform: translateY(-50%);
             }
+
+            &--no-icon::before{
+                content: ""
+            }
+
+            &--overdue::before{
+                content: "\f071";
+                font-family: 'Font Awesome 5 Free';
+                font-weight: bold;
+                font-size: 14px;
+                display: inline-block;
+                position: absolute;
+                left: -20px;
+                color: #c43333;
+                top:50%;
+                transform: translateY(-50%);
+            }
             
         }
         &__notification-icon{
@@ -403,6 +637,30 @@ body {
             color: #A8B061;
             justify-content: flex-end;
             font-size: 20px;
+        }
+        &__notification-check{
+            display: none;
+        }
+        &__notification-check-label::before{
+            content: "";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid $gris;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+
+        &__notification-check:checked + .card__notification-check-label::before{
+            content: "\2714";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #A8B061;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
         }
 
         // ELEMENTO MAILS
@@ -413,7 +671,7 @@ body {
         &__mail{
             display: flex;
             flex-direction: column;
-            border-bottom: 1px solid #d8d8d8;
+            border-bottom: 1px solid $gris;
             
             &:last-of-type{
                 border: none;
@@ -451,7 +709,7 @@ body {
         }
         &__project{
             padding-top: 15px;
-            border-bottom: 1px solid #d8d8d8;
+            border-bottom: 1px solid $gris;
 
             &:last-of-type{
                 border: none;
@@ -489,14 +747,14 @@ body {
             width: 10px;
         }
         &__scroll::-webkit-scrollbar-thumb{
-            background-color: #D8D8D8;
+            background-color: $gris;
             border-radius: 100px;
         }
         &__contactos-details{
             width: 100%;
             display: flex;
             padding: 14px 5px 14px 0;
-            border-bottom: 1px solid #d8d8d8;
+            border-bottom: 1px solid $gris;
 
             &:last-of-type{
                 border: none;
@@ -569,46 +827,6 @@ body {
 
 
 
-    // 2 PANTALLA 
-    @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-        .left-block {
-            width: 33.3%;
-    
-        }
-        .center-block {
-            width: 33.3%;
-        }
-        .right-block {
-            width: 33.3%;
-        }
-    }
-
-    // 3 PANTALLA
-    @media only screen and (min-width: 600px) and (max-width: 1023px) {
-        .left-block {
-            width: 50%;
-    
-        }
-        .center-block {
-            width: 50%;
-        }
-        .right-block {
-            width: 50%;
-        }
-    }
-    // 4 PANTALLA
-    @media only screen and (min-width: 320px) and (max-width: 599px) {
-        .left-block {
-            width: 100%;
-    
-        }
-        .center-block {
-            width: 100%;
-        }
-        .right-block {
-            width: 100%;
-        }
-    }
 
 
 
