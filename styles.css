@@ -140,19 +140,18 @@ body {
 
 .nav__profile-bell::before {
   content: "8";
-  padding-bottom: 3px;
   display: block;
   text-align: center;
   font-weight: bold;
-  font-size: 15px;
-  height: 18px;
-  width: 18px;
+  font-size: 11px;
+  height: 14px;
+  width: 14px;
   border-radius: 100%;
   background-color: #B01818;
   color: #fff;
   position: absolute;
-  top: -6px;
-  right: -5px;
+  top: 0px;
+  right: -2px;
 }
 
 .nav__profile-bell-icon {
@@ -196,10 +195,10 @@ body {
     width: 10%;
   }
   .nav__menu {
-    width: 43%;
+    width: 44.5%;
   }
   .nav__form {
-    width: 37%;
+    width: 35.5%;
     position: relative;
     padding-left: 33px;
   }
@@ -338,6 +337,10 @@ body {
   padding-top: 28px;
 }
 
+.main .general-title {
+  display: none;
+}
+
 .main .left-block {
   width: 25%;
   height: 100%;
@@ -386,7 +389,7 @@ body {
 @media only screen and (min-width: 320px) and (max-width: 599px) {
   .main .center-block {
     width: 100%;
-    padding: 30px 15px 0px 15px;
+    padding: 15px 15px 0px 15px;
   }
 }
 
@@ -405,14 +408,14 @@ body {
 @media only screen and (min-width: 600px) and (max-width: 1023px) {
   .main .right-block {
     width: 50%;
-    padding: 5px 10px 0px 15px;
+    padding: 5px 10px 30px 15px;
   }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 599px) {
   .main .right-block {
     width: 100%;
-    padding: 30px 15px 30px 15px;
+    padding: 15px 15px 0px 15px;
   }
 }
 
@@ -427,6 +430,12 @@ body {
 
 .main .card--margin-top {
   margin-top: 30px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+  .main .card--margin-top {
+    margin-top: 15px;
+  }
 }
 
 .main .card__header {
@@ -462,6 +471,7 @@ body {
 
 .main .card__header-title {
   position: relative;
+  font-size: 16px;
 }
 
 .main .card__header-title::before {
@@ -515,6 +525,7 @@ body {
 }
 
 .main .card__paragraph {
+  font-size: 14px;
   margin-top: 0;
   margin-bottom: 0;
   overflow: hidden;
@@ -654,12 +665,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 14px 25px 15px 25px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 14px 25px 0 25px;
 }
 
-.main .card__notification:last-of-type {
+.main .card__notification:last-of-type > .card__notification-wrapper {
   border: none;
+}
+
+.main .card__notification-wrapper {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .main .card__notification-details {
@@ -835,10 +850,12 @@ body {
 }
 
 .main .card__pill {
-  padding: 5px 10px;
+  padding: 2px 10px;
   background-color: #E8EEB3;
   margin-right: 10px;
   border-radius: 70px;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .main .card__pill--outline {
@@ -854,7 +871,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 445px;
+  max-height: 445px;
 }
 
 .main .card__scroll {
@@ -932,9 +949,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 15px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
   font-weight: bold;
+  font-size: 14px;
   color: #4366A6;
   border-radius: 0px 0px 5px 5px;
 }

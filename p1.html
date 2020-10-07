@@ -14,14 +14,14 @@
     <header>
         <nav class="nav">
             <div class="nav__hamburguer">
-                <a class="nav__hamburguer-icon" href="#"><i class="fa fa-bars"></i></a>
+                <a class="nav__hamburguer-icon" href="#" title="Menú"><i class="fa fa-bars"></i></a>
             </div>
             <!-- LOGO WRAPPER -->
             <div class="nav__logo">
-                everis<span style="font-weight: bold;">knowler</span>
+                everis<b>knowler</b>
             </div>
             <div class="nav__logo-responsive">
-                <a href="#"><img class="nav__logo-responsive-img" src="img/logo-responsive1.png" alt=""></a>
+                <a href="#" title="everisknowler"><img class="nav__logo-responsive-img" src="img/logo-responsive1.png" alt=""></a>
             </div>
             <!-- FORM WRAPPER -->
             <div class="nav__form">
@@ -35,16 +35,16 @@
             <!-- MENU WRAPPER -->
             <div class="nav__menu">
                 <ul>
-                    <li class="nav__menu-lista"><a href="#" class="nav__menu-icons"><i class="nav__menu-icons-icon fa fa-home"></i>Home</a></li>
-                    <li class="nav__menu-lista"><a href="#" class="nav__menu-icons"><i class="nav__menu-icons-icon fa fa-th"></i>Aplicaciones</a></li>
-                    <li class="nav__menu-lista"><a href="#" class="nav__menu-icons"><i class="nav__menu-icons-icon fa fa-globe"></i>Comunidades</a></li>
-                    <li class="nav__menu-lista"><a href="#" class="nav__menu-icons"><i class="nav__menu-icons-icon fa fa-cloud"></i>everPedia</a></li>
+                    <li class="nav__menu-lista"><a href="#" class="nav__menu-icons" title="Inicio"><i class="nav__menu-icons-icon fa fa-home"></i>Inicio</a></li>
+                    <li class="nav__menu-lista"><a href="#" class="nav__menu-icons" title="Aplicaciones"><i class="nav__menu-icons-icon fa fa-th"></i>Aplicaciones</a></li>
+                    <li class="nav__menu-lista"><a href="#" class="nav__menu-icons" title="Comunidades"><i class="nav__menu-icons-icon fa fa-globe"></i>Comunidades</a></li>
+                    <li class="nav__menu-lista"><a href="#" class="nav__menu-icons" title="everPedia"><i class="nav__menu-icons-icon fa fa-cloud"></i>everPedia</a></li>
                 </ul> 
             </div>
             <!-- PROFILE WRAPPER -->
             <div class="nav__profile">
                 <div class="nav__profile-bell">
-                    <a href="#" class="nav__profile-bell-icon"><i class="fa fa-bell"></i></a>
+                    <a href="#" class="nav__profile-bell-icon" title="Notificaciones"><i class="fa fa-bell"></i></a>
                 </div>
                 <div class="nav__profile-img"></div>
             </div>
@@ -52,47 +52,51 @@
     </header>
 
     <main class="main">
+
+        <!-- GENERAL H1 TITLE -->
+        <h1 class="general-title">everisknowler</h1>
+
         <!-- LEFT BLOCK -->
         <div class="left-block">
             <!-- CARD EVENTOS -->
             <div class="card">
 
                 <div class="card__header">
-                    <p class="card__header-title card__header-title--events">EVENTOS</p>
+                    <h2 class="card__header-title card__header-title--events">EVENTOS</h2>
                 </div>
 
                 <div class="card__body">
                     <div class="card__event">
-                        <p class="card__event-date">HOY</p>
+                        <span class="card__event-date">HOY</span>
                         <div class="card__event-details">
                             <div class="card__event-hour">11:00</div>
                             <div class="card__event-info">
-                                <a href="#" class="card__link">SKM Wireframes checkpoint</a>
-                                <p class="card__paragraph">11:00 a 12:00 - Sala 446</p>
+                                <a href="#" class="card__link" title="SKM Wireframes checkpoint">SKM Wireframes checkpoint</a>
+                                <span class="card__paragraph">11:00 a 12:00 - Sala 446</span>
                             </div>
                         </div>
                         <div class="card__event-details card__event-details--second">
                             <div class="card__event-hour">13:00</div>
                             <div class="card__event-info">
-                                <a href="#" class="card__link">SKM chill out</a>
-                                <p class="card__paragraph">13:00 a 13:40 - Sala 446</p>
+                                <a href="#" class="card__link" title="SKM chill out">SKM chill out</a>
+                                <span class="card__paragraph">13:00 a 13:40 - Sala 446</span>
                             </div>
                         </div>
                     </div>
                     <div class="card__event  card__event--last">
-                        <p class="card__event-date card__event-date--last">MAÑANA</p>
+                        <span class="card__event-date card__event-date--last">MAÑANA</span>
                         <div class="card__event-details">
                             <div class="card__event-hour">11:00</div>
                             <div class="card__event-info">
-                                <a href="#" class="card__link">SKM Wireframes check</a>
-                                <p class="card__paragraph">11:00 a 12:00 - Sala 446</p>
+                                <a href="#" class="card__link" title="SKM Wireframes check">SKM Wireframes check</a>
+                                <span class="card__paragraph">11:00 a 12:00 - Sala 446</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="card__footer">
-                    <p class="card__footer-text">Ver más</p>
+                    <span class="card__footer-text">Ver más</span>
                 </div>
             </div>
 
@@ -100,59 +104,61 @@
             <div class="card card--margin-top">
 
                 <div class="card__header">
-                    <p class="card__header-title card__header-title--notifications">NOTIFICACIONES</p>
+                    <h2 class="card__header-title card__header-title--notifications">NOTIFICACIONES</h2>
                 </div>
 
                 <div class="card__body">
-                    <div class="card__notification">
-                        <div class="card__notification-details">
-                            <div class="card__notification-info">
-                                <a href="#" class="card__notification-title">Actualizar benchmark perfiles en proyecto</a>
-                                <p class="card__paragraph">SKM: intranet inteligente</p>
-                                <small class="card__notification-deadline">Deadline 19/06</small>
-                            </div>
-                            <div class="card__notification-icon">
-                                <form>
-                                    <input type="checkbox" id="checkbox1" class="card__notification-check" checked>
-                                    <label class="card__notification-check-label" for="checkbox1"></label>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card__notification">
-                        <div class="card__notification-details">
-                            <div class="card__notification-info">
-                                <a href="#" class="card__notification-title">Actualizar documentos</a>
-                                <p class="card__paragraph">SKM: intranet inteligente</p>
-                                <small class="card__notification-deadline card__notification-deadline--no-icon">Deadline 19/06</small>
-                            </div>
-                            <div class="card__notification-icon">
-                                <form>
-                                    <input type="checkbox" id="checkbox2" class="card__notification-check">
-                                    <label class="card__notification-check-label" for="checkbox2"></label>
-                                </form>
+                    <form>
+                        <div class="card__notification">
+                            <div class="card__notification-wrapper">
+                                <div class="card__notification-details">
+                                    <div class="card__notification-info">
+                                        <a href="#" class="card__notification-title" title="Actualizar benchmark perfiles en proyecto">Actualizar benchmark perfiles en proyecto</a>
+                                        <span class="card__paragraph">SKM: intranet inteligente</span>
+                                        <small class="card__notification-deadline">Deadline 19/06</small>
+                                    </div>
+                                    <div class="card__notification-icon">
+                                        <input type="checkbox" id="checkbox1" class="card__notification-check" checked>
+                                        <label class="card__notification-check-label" for="checkbox1"></label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card__notification">
-                        <div class="card__notification-details">
-                            <div class="card__notification-info">
-                                <a href="#" class="card__notification-title">Actualizar documentos</a>
-                                <p class="card__paragraph">SKM: intranet inteligente</p>
-                                <small class="card__notification-deadline card__notification-deadline--overdue">Overdue 27/05</small>
-                            </div>
-                            <div class="card__notification-icon">
-                                <form>
-                                    <input type="checkbox" id="checkbox3" class="card__notification-check">
-                                    <label class="card__notification-check-label" for="checkbox3"></label>
-                                </form>
-                            </div>
+                        <div class="card__notification">
+                            <div class="card__notification-wrapper">
+                                <div class="card__notification-details">
+                                    <div class="card__notification-info">
+                                        <a href="#" class="card__notification-title" title="Actualizar documentos">Actualizar documentos</a>
+                                        <span class="card__paragraph">SKM: intranet inteligente</span>
+                                        <small class="card__notification-deadline card__notification-deadline--no-icon">Deadline 19/06</small>
+                                    </div>
+                                    <div class="card__notification-icon">
+                                        <input type="checkbox" id="checkbox2" class="card__notification-check">
+                                        <label class="card__notification-check-label" for="checkbox2"></label>
+                                    </div>
+                                </div>
+                            </div>    
                         </div>
-                    </div>                    
+                        <div class="card__notification">
+                            <div class="card__notification-wrapper">
+                                <div class="card__notification-details">
+                                    <div class="card__notification-info">
+                                        <a href="#" class="card__notification-title" title="Actualizar documentos">Actualizar documentos</a>
+                                        <span class="card__paragraph">SKM: intranet inteligente</span>
+                                        <small class="card__notification-deadline card__notification-deadline--overdue">Overdue 27/05</small>
+                                    </div>
+                                    <div class="card__notification-icon">
+                                        <input type="checkbox" id="checkbox3" class="card__notification-check">
+                                        <label class="card__notification-check-label" for="checkbox3"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </form>                 
                 </div>
 
                 <div class="card__footer">
-                    <p class="card__footer-text">Ver más</p>
+                    <span class="card__footer-text">Ver más</span>
                 </div>
             </div>
             
@@ -166,57 +172,57 @@
         <div class="center-block">
             <div class="card">
                 <div class="card__header">
-                    <p class="card__header-title card__header-title--mails">MAILS</p>
+                    <h2 class="card__header-title card__header-title--mails">MAILS</h2>
                 </div>
 
                 <div class="card__body">
                     <div class="card__mails">
                         <div class="card__mail">
-                            <p class="card__mail-date">20/06/2017 - 13:00</p>
+                            <span class="card__mail-date">20/06/2017 - 13:00</span>
                             <div class="card__mail-user">
                                 <div class="card__mail-user-img"></div>
                                 <div class="card__mail-user-name">
-                                    Francisco Javier Fernández
+                                    <span>Francisco Javier Fernández</span>
                                 </div>
                             </div>
                             <div class="card__mail-data">
-                                <a class="card__link ellipsis">Nuevas versiones de las pantallas</a>
-                                <div class="card__paragraph">Hola equipo, aquí tenéis las actualizaciones de las pantallas que
+                                <a href="#" class="card__link ellipsis" title="Nuevas versiones de las pantallas">Nuevas versiones de las pantallas</a>
+                                <p class="card__paragraph">Hola equipo, aquí tenéis las actualizaciones de las pantallas que
                                     comentamos el otro día. Pero si tenéis cualquier duda me podéis escribir por email o me
                                     llamáis a mi móvil.
-                                </div>
+                                </p>
                             </div>
                         </div>
                         <div class="card__mail">
-                            <p class="card__mail-date">20/06/2017 - 13:00</p>
+                            <span class="card__mail-date">20/06/2017 - 13:00</span>
                             <div class="card__mail-user">
                                 <div class="card__mail-user-img"></div>
                                 <div class="card__mail-user-name">
-                                    Francisco Javier Fernández
+                                    <span>Francisco Javier Fernández</span>
                                 </div>
                             </div>
                             <div class="card__mail-data">
-                                <a class="card__link ellipsis">Nuevos datos password (Invision/Zeplin)</a>
-                                <div class="card__paragraph">Hola equipo, aquí van las actualizaciones de las pantallas que
+                                <a href="#" class="card__link ellipsis" title="Nuevos datos password (Invision/Zeplin)">Nuevos datos password (Invision/Zeplin)</a>
+                                <p class="card__paragraph">Hola equipo, aquí van las actualizaciones de las pantallas que
                                     comentamos día de la reunión pasada. Si tenéis cualquier duda me escribís un correo os
                                     responfo lo antes posible.
-                                </div>
+                                </p>
                             </div>
                         </div>
                         <div class="card__mail">
-                            <p class="card__mail-date">20/06/2017 - 13:00</p>
+                            <span class="card__mail-date">20/06/2017 - 13:00</span>
                             <div class="card__mail-user">
                                 <div class="card__mail-user-img"></div>
                                 <div class="card__mail-user-name">
-                                    Francisco Javier Fernández
+                                    <span>Francisco Javier Fernández</span>
                                 </div>
                             </div>
                             <div class="card__mail-data">
-                                <a class="card__link ellipsis">Nuevas versiones de las pantallas</a>
-                                <div class="card__paragraph">Hola equipo, aquí van las actualizaciones de las pantallas que
+                                <a href="#" class="card__link ellipsis" title="Nuevas versiones de las pantallas">Nuevas versiones de las pantallas</a>
+                                <p class="card__paragraph">Hola equipo, aquí van las actualizaciones de las pantallas que
                                     comentamos día de la reunión pasada. Si tenéis cualquier duda me escribís un correo os
                                     responfo lo antes posible.
-                                </div>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -224,50 +230,50 @@
                 </div>
 
                 <div class="card__footer">
-                    <p class="card__footer-text">Ver más</p>
+                    <span class="card__footer-text">Ver más</span>
                 </div>
             </div>
 
             <div class="card card--margin-top">
                 <div class="card__header">
-                    <p class="card__header-title card__header-title--projects">PROYECTOS</p>
+                    <h2 class="card__header-title card__header-title--projects">PROYECTOS</h2>
                 </div>
 
                 <div class="card__body">
                     <div class="card__projects">
                         <div class="card__tab">
                             <ul class="card__tab-wrapper card__tab-wrapper--text-start">
-                                <li class="card__tab-menu card__tab-menu--active bold ellipsis"><a href="#" class="card__tab-links card__tab-links--active">En curso</a></li>
-                                <li class="card__tab-menu ellipsis"><a href="#" class="card__tab-links">Relacionados</a></li>
-                                <li class="card__tab-menu ellipsis"><a href="#" class="card__tab-links">Cerrados</a></li>
+                                <li class="card__tab-menu card__tab-menu--active bold ellipsis"><a href="#" class="card__tab-links card__tab-links--active" title="En curso">En curso</a></li>
+                                <li class="card__tab-menu ellipsis"><a href="#" class="card__tab-links" title="Relacionados">Relacionados</a></li>
+                                <li class="card__tab-menu ellipsis"><a href="#" class="card__tab-links" title="Cerrados">Cerrados</a></li>
                             </ul>
                         </div>
                         <div class="card__project-wrapper">
                             <div class="card__project">
-                                <a href="#" class="card__link">SKM: intranet inteligente</a>
-                                <p class="card__paragraph">Proyecto interno</p>
+                                <a href="#" class="card__link" title="SKM: intranet inteligente">SKM: intranet inteligente</a>
+                                <span class="card__paragraph">Proyecto interno</span>
                                 <div class="card__project-pills">
-                                    <p class="card__pill">Intranet</p>
+                                    <p class="card__pill ellipsis">Intranet</p>
                                     <p class="card__pill ellipsis">Buscador inteligente</p>
-                                    <p class="card__pill card__pill--outline">+2</p>
+                                    <p class="card__pill card__pill--outline ellipsis">+2</p>
                                 </div>
                             </div>
                             <div class="card__project">
-                                <a href="#" class="card__link">SKM: intranet inteligente</a>
-                                <p class="card__paragraph">Proyecto interno</p>
+                                <a href="#" class="card__link" title="SKM: intranet inteligente">SKM: intranet inteligente</a>
+                                <span class="card__paragraph">Proyecto interno</span>
                                 <div class="card__project-pills">
-                                    <p class="card__pill">Intranet</p>
+                                    <p class="card__pill ellipsis">Intranet</p>
                                     <p class="card__pill ellipsis">Buscador inteligente</p>
-                                    <p class="card__pill card__pill--outline">+2</p>
+                                    <p class="card__pill card__pill--outline ellipsis">+2</p>
                                 </div>
                             </div>
                             <div class="card__project">
-                                <a href="#" class="card__link">SKM: intranet inteligente</a>
-                                <p class="card__paragraph">Proyecto interno</p>
+                                <a href="#" class="card__link" title="SKM: intranet inteligente">SKM: intranet inteligente</a>
+                                <span class="card__paragraph">Proyecto interno</span>
                                 <div class="card__project-pills">
-                                    <p class="card__pill">Intranet</p>
+                                    <p class="card__pill ellipsis">Intranet</p>
                                     <p class="card__pill ellipsis">Buscador inteligente</p>
-                                    <p class="card__pill card__pill--outline">+2</p>
+                                    <p class="card__pill card__pill--outline ellipsis">+2</p>
                                 </div>
                             </div>
                         </div>
@@ -277,7 +283,7 @@
                 </div>
 
                 <div class="card__footer">
-                    <p class="card__footer-text">Ver más</p>
+                    <span class="card__footer-text">Ver más</span>
                 </div>
             </div>
         </div>
@@ -287,16 +293,16 @@
         <div class="right-block">
             <div class="card">
                 <div class="card__header">
-                    <p class="card__header-title card__header-title--contacts">MIS CONTACTOS</p>
+                    <h2 class="card__header-title card__header-title--contacts">MIS CONTACTOS</h2>
                 </div>
 
                 <div class="card__body">
                     <div class="card__contactos">
                         <div class="card__tab">
                             <ul class="card__tab-wrapper">
-                                <li class="card__tab-menu bold"><a href="#" class="card__tab-links  card__tab-links--padding">Contactos</a></li>
-                                <li class="card__tab-menu"><a href="#" class="card__tab-links card__tab-links--padding">Grupos</a></li>
-                                <li class="card__tab-menu"><a href="#" class="card__tab-links card__tab-links--padding">Relacionados</a></li>
+                                <li class="card__tab-menu bold"><a href="#" class="card__tab-links  card__tab-links--padding" title="Contactos">Contactos</a></li>
+                                <li class="card__tab-menu"><a href="#" class="card__tab-links card__tab-links--padding" title="Grupos">Grupos</a></li>
+                                <li class="card__tab-menu"><a href="#" class="card__tab-links card__tab-links--padding" title="Relacionados">Relacionados</a></li>
                             </ul>
                         </div>
 
@@ -305,57 +311,57 @@
                             <div class="card__contactos-details">
                                 <div class="card__contactos-image card__contactos-image--raquel"></div>
                                 <div class="card__contactos-info">
-                                    <a href="#" class="card__link">Raquel Laguna Soriano</a>
-                                    <p class="card__paragraph">Leader - ExD</p>
+                                    <a href="#" class="card__link" title="Raquel Laguna Soriano">Raquel Laguna Soriano</a>
+                                    <span class="card__paragraph">Leader - ExD</span>
                                 </div>
                             </div>
                             <div class="card__contactos-details">
                                 <div class="card__contactos-image card__contactos-image--raquel"></div>
                                 <div class="card__contactos-info">
-                                    <a href="#" class="card__link">Álvaro Ruiz Miranda</a>
-                                    <p class="card__paragraph">Student - IT</p>
+                                    <a href="#" class="card__link" title="Álvaro Ruiz Miranda">Álvaro Ruiz Miranda</a>
+                                    <span class="card__paragraph">Student - IT</span>
                                 </div>
                             </div>
                             <div class="card__contactos-details">
                                 <div class="card__contactos-image card__contactos-image--raquel"></div>
                                 <div class="card__contactos-info">
-                                    <a href="#" class="card__link">María López Segarra</a>
-                                    <p class="card__paragraph">Student - ExD</p>
+                                    <a href="#" class="card__link" title="María López Segarra">María López Segarra</a>
+                                    <span class="card__paragraph">Student - ExD</span>
                                 </div>
                             </div>
                             <div class="card__contactos-details">
                                 <div class="card__contactos-image card__contactos-image--raquel"></div>
                                 <div class="card__contactos-info">
-                                    <a href="#" class="card__link">Miguel Pérez Lobera</a>
-                                    <p class="card__paragraph">Staff - ExD</p>
+                                    <a href="#" class="card__link" title="Miguel Pérez Lobera">Miguel Pérez Lobera</a>
+                                    <span class="card__paragraph">Staff - ExD</span>
                                 </div>
                             </div>
                             <div class="card__contactos-details">
                                 <div class="card__contactos-image card__contactos-image--raquel"></div>
                                 <div class="card__contactos-info">
-                                    <a href="#" class="card__link">Francisco Javier Martínez de la Fuente</a>
-                                    <p class="card__paragraph">Manager - IT</p>
+                                    <a href="#" class="card__link" title="Francisco Javier Martínez de la Fuente">Francisco Javier Martínez de la Fuente</a>
+                                    <span class="card__paragraph">Manager - IT</span>
                                 </div>
                             </div>
                             <div class="card__contactos-details">
                                 <div class="card__contactos-image card__contactos-image--raquel"></div>
                                 <div class="card__contactos-info">
-                                    <a href="#" class="card__link">Sofía Beltrán Moreno</a>
-                                    <p class="card__paragraph">Leader - ExD</p>
+                                    <a href="#" class="card__link" title="Sofía Beltrán Moreno">Sofía Beltrán Moreno</a>
+                                    <span class="card__paragraph">Leader - ExD</span>
                                 </div>
                             </div>
                             <div class="card__contactos-details">
                                 <div class="card__contactos-image card__contactos-image--raquel"></div>
                                 <div class="card__contactos-info">
-                                    <a href="#" class="card__link">Raquel Laguna Soriano</a>
-                                    <p class="card__paragraph">Leader - ExD</p>
+                                    <a href="#" class="card__link" title="Raquel Laguna Soriano">Raquel Laguna Soriano</a>
+                                    <soan class="card__paragraph">Leader - ExD</soan>
                                 </div>
                             </div>
                             <div class="card__contactos-details">
                                 <div class="card__contactos-image card__contactos-image--raquel"></div>
                                 <div class="card__contactos-info">
-                                    <a href="#" class="card__link">Raquel Laguna Soriano</a>
-                                    <p class="card__paragraph">Leader - ExD</p>
+                                    <a href="#" class="card__link" title="Raquel Laguna Soriano">Raquel Laguna Soriano</a>
+                                    <span class="card__paragraph">Leader - ExD</span>
                                 </div>
                             </div>
                         </div>
