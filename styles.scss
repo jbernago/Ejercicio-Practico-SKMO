@@ -319,6 +319,21 @@ body {
     flex-wrap: wrap;
     padding-top: 28px;
     $altura: 100%;
+    position: relative;
+
+
+    &::before{
+        content: "";
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("img/fondo.jpg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 500px;
+        box-shadow: inset 0px -50px 20px -8px #E5E5E5;
+    }
 
     .general-title{
         display: none;
@@ -392,9 +407,9 @@ body {
     .card {
         background-color: white;
         border-radius: 5px;
-        box-shadow: $bshadow;
         margin: 0;
         position: relative;
+        box-shadow: $bshadow;
 
         &--margin-top {
             margin-top: 30px;
@@ -415,7 +430,7 @@ body {
             color: $blanco;
             height: 55px;
             max-width: 100%;
-            border-radius: 5px 5px 0px 0px;
+            border-radius: 4px 4px 0px 0px;
             padding-left: 55px;
             position: relative;
 
