@@ -594,6 +594,7 @@ body {
 }
 
 .main .card__tab-links {
+  cursor: pointer;
   color: #4366A6;
   text-decoration: none;
   padding: 0 30px;

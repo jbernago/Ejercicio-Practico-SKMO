@@ -543,6 +543,7 @@ body {
             }
         }
         &__tab-links{
+            cursor: pointer;
             color: $azul;
             text-decoration: none;
             padding: 0 30px;
