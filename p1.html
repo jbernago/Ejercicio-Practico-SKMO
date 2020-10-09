@@ -244,41 +244,20 @@
 
                 <div class="card__body">
                     <div class="card__projects">
+
                         <div class="card__tab">
                             <ul class="card__tab-wrapper card__tab-wrapper--text-start">
-                                <li class="card__tab-menu card__tab-menu--active bold ellipsis"><a href="#" class="card__tab-links card__tab-links--active" title="En curso">En curso</a></li>
-                                <li class="card__tab-menu ellipsis"><a href="#" class="card__tab-links" title="Relacionados">Relacionados</a></li>
-                                <li class="card__tab-menu ellipsis"><a href="#" class="card__tab-links" title="Cerrados">Cerrados</a></li>
+                                <li class="card__tab-menu card__tab-menu--active ellipsis" id="allList"><a class="card__tab-links" title="Todos" id="allButton">Todos</a></li>
+                                <li class="card__tab-menu ellipsis" id="processList"><a class="card__tab-links" title="En curso" id="processButton">En curso</a></li>
+                                <li class="card__tab-menu ellipsis" id="relList"><a class="card__tab-links" title="Relacionados" id="relButton">Relacionados</a></li>
+                                <li class="card__tab-menu ellipsis" id="closedList"><a class="card__tab-links" title="Cerrados" id="closedButton">Cerrados</a></li>
                             </ul>
                         </div>
-                        <div class="card__project-wrapper">
-                            <div class="card__project">
-                                <a href="#" class="card__link" title="SKM: intranet inteligente">SKM: intranet inteligente</a>
-                                <span class="card__paragraph">Proyecto interno</span>
-                                <div class="card__project-pills">
-                                    <p class="card__pill ellipsis">Intranet</p>
-                                    <p class="card__pill ellipsis">Buscador inteligente</p>
-                                    <p class="card__pill card__pill--outline ellipsis">+2</p>
-                                </div>
-                            </div>
-                            <div class="card__project">
-                                <a href="#" class="card__link" title="SKM: intranet inteligente">SKM: intranet inteligente</a>
-                                <span class="card__paragraph">Proyecto interno</span>
-                                <div class="card__project-pills">
-                                    <p class="card__pill ellipsis">Intranet</p>
-                                    <p class="card__pill ellipsis">Buscador inteligente</p>
-                                    <p class="card__pill card__pill--outline ellipsis">+2</p>
-                                </div>
-                            </div>
-                            <div class="card__project">
-                                <a href="#" class="card__link" title="SKM: intranet inteligente">SKM: intranet inteligente</a>
-                                <span class="card__paragraph">Proyecto interno</span>
-                                <div class="card__project-pills">
-                                    <p class="card__pill ellipsis">Intranet</p>
-                                    <p class="card__pill ellipsis">Buscador inteligente</p>
-                                    <p class="card__pill card__pill--outline ellipsis">+2</p>
-                                </div>
-                            </div>
+                        
+                        <div class="card__project-wrapper" id="card__project-wrapper">
+
+
+
                         </div>
                         
                     </div>
@@ -303,7 +282,7 @@
                     <div class="card__contactos">
                         <div class="card__tab">
                             <ul class="card__tab-wrapper">
-                                <li class="card__tab-menu bold"><a href="#" class="card__tab-links  card__tab-links--padding" title="Contactos">Contactos</a></li>
+                                <li class="card__tab-menu card__tab-menu--active"><a href="#" class="card__tab-links  card__tab-links--padding" title="Contactos">Contactos</a></li>
                                 <li class="card__tab-menu"><a href="#" class="card__tab-links card__tab-links--padding" title="Grupos">Grupos</a></li>
                                 <li class="card__tab-menu"><a href="#" class="card__tab-links card__tab-links--padding" title="Relacionados">Relacionados</a></li>
                             </ul>
@@ -357,7 +336,7 @@
                                 <div class="card__contactos-image card__contactos-image--raquel"></div>
                                 <div class="card__contactos-info">
                                     <a href="#" class="card__link" title="Raquel Laguna Soriano">Raquel Laguna Soriano</a>
-                                    <soan class="card__paragraph">Leader - ExD</soan>
+                                    <span class="card__paragraph">Leader - ExD</span>
                                 </div>
                             </div>
                             <div class="card__contactos-details">
@@ -376,6 +355,8 @@
             </div>
         </div>
     </main>
+
     
+    <script src="main.js"></script>
 </body>
 </html>

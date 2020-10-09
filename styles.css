@@ -521,10 +521,6 @@ body {
   content: "\f0c0";
 }
 
-.main .card .bold {
-  font-weight: bold;
-}
-
 .main .card .ellipsis {
   white-space: nowrap;
   overflow: hidden;
@@ -591,9 +587,11 @@ body {
 
 .main .card__tab-menu--active {
   border-bottom: 2px solid #4366A6;
+  font-weight: bold;
 }
 
 .main .card__tab-links {
+  cursor: pointer;
   color: #4366A6;
   text-decoration: none;
   padding: 0 30px;
@@ -871,6 +869,8 @@ body {
   border-radius: 70px;
   font-size: 13px;
   font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .main .card__pill--outline {
