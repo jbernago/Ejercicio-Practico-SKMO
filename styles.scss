@@ -488,9 +488,6 @@ body {
         // CARD BODY
         
         // REUTILIZABLES
-        .bold{
-            font-weight: bold;
-        }
         .ellipsis{
             white-space: nowrap;
             overflow: hidden;
@@ -540,6 +537,7 @@ body {
 
             &--active{
                 border-bottom: 2px solid $azul;
+                font-weight: bold;
             }
         }
         &__tab-links{
@@ -756,6 +754,8 @@ body {
             border-radius: 70px;
             font-size: 13px;
             font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 20px;
 
             &--outline{
                 background-color: #fff;
