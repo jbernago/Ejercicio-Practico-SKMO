@@ -16,7 +16,7 @@ $bshadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 
 body {
     margin: 0;
-    background-color: rgba(#000000, 0.1);
+    background-color: #ededed;
 }
 
 // BLOQUE NAV
@@ -730,6 +730,59 @@ body {
             padding-bottom: 10px;
         }
 
+        // ELEMENTO DETALLE PROYECTO
+        &__project-detail{
+            padding: 35px 25px;
+            position: relative;
+        }
+        &__project-plus{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #7F950B;
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 100%;
+            cursor: pointer;
+        }
+        &__project-plus-icon{
+            color: $blanco;
+            font-weight: bold;
+            font-size: 2em;
+        }
+        &__project-form{
+            display: none;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        &__project-field{
+            width: 49%;
+            height: 35px;
+            padding-left: 10px;
+            font-size: 15px;
+
+            &--margin-top{
+                margin-top: 15px;
+            }
+        }
+        &__project-button{
+            width: 100%;
+            height: 35px;
+            border-radius: 0;
+            border: none;
+            font-weight: bold;
+            background-color: $azul;
+            color: $blanco;
+            cursor: pointer;
+
+            &--bg-green{
+                background-color: #7F950B;
+            }
+        }
 
 
         // ELEMENTO PROYECTOS
@@ -739,9 +792,15 @@ body {
         &__project{
             padding-top: 15px;
             border-bottom: 1px solid $gris;
+            position: relative;
+            z-index: 1;
 
             &:last-of-type{
                 border: none;
+            }
+            &:hover{
+                background-color: rgba(#ededed, 0.5);
+                cursor: pointer;
             }
         }
         &__project-pills{
@@ -760,6 +819,39 @@ body {
             &--outline{
                 background-color: #fff;
                 border: 2px solid #E8EEB3;
+            }
+        }
+        &__project-modify-link{
+            position: absolute;
+            right: 0;
+            text-decoration: none;
+            z-index: 9999;
+
+            &--edit{
+                right: 80px;
+                color: $azul;
+
+                &::before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: -10px;
+
+                }
+            }
+            &--delete{
+                color: crimson;
+
+                &::before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: -10px;
+
+                }
+            }
+            &:hover{
+                text-decoration: underline;
             }
         }
 
