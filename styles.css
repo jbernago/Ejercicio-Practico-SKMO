@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #ededed;
 }
 
 .nav {
@@ -843,6 +843,74 @@ body {
   padding-bottom: 10px;
 }
 
+.main .card__project-detail {
+  padding: 35px 25px;
+  position: relative;
+}
+
+.main .card__project-plus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #7F950B;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.main .card__project-plus-icon {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.main .card__project-form {
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main .card__project-field {
+  width: 49%;
+  height: 35px;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.main .card__project-field--margin-top {
+  margin-top: 15px;
+}
+
+.main .card__project-button {
+  width: 100%;
+  height: 35px;
+  border-radius: 0;
+  border: none;
+  font-weight: bold;
+  background-color: #4366A6;
+  color: #fff;
+  cursor: pointer;
+}
+
+.main .card__project-button--bg-green {
+  background-color: #7F950B;
+}
+
 .main .card__project-wrapper {
   padding: 0 25px;
 }
@@ -850,10 +918,21 @@ body {
 .main .card__project {
   padding-top: 15px;
   border-bottom: 1px solid #d8d8d8;
+  position: relative;
+  z-index: 1;
 }
 
 .main .card__project:last-of-type {
   border: none;
+}
+
+.main .card__project:hover {
+  background-color: rgba(237, 237, 237, 0.5);
+  cursor: pointer;
+}
+
+.main .card__project--active {
+  background-color: #ededed;
 }
 
 .main .card__project-pills {
@@ -876,6 +955,39 @@ body {
 .main .card__pill--outline {
   background-color: #fff;
   border: 2px solid #E8EEB3;
+}
+
+.main .card__project-modify-link {
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+}
+
+.main .card__project-modify-link--edit {
+  right: 80px;
+  color: #4366A6;
+}
+
+.main .card__project-modify-link--edit::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -10px;
+}
+
+.main .card__project-modify-link--delete {
+  color: crimson;
+}
+
+.main .card__project-modify-link--delete::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -10px;
+}
+
+.main .card__project-modify-link:hover {
+  text-decoration: underline;
 }
 
 .main .card__contactos {

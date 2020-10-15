@@ -173,6 +173,8 @@
 
         <!-- CENTER BLOCK -->
         <div class="center-block">
+
+            <!-- CARD MAILS -->
             <div class="card">
                 <div class="card__header">
                     <h2 class="card__header-title card__header-title--mails">MAILS</h2>
@@ -237,6 +239,40 @@
                 </div>
             </div>
 
+            <!-- CARD CRUD PROJECTS -->
+            <div class="card card--margin-top">
+                <div class="card__header">
+                    <h2 class="card__header-title card__header-title--projects">DETALLE PROYECTO</h2>
+                </div>
+
+                <div class="card__body">
+                    <div class="card__project-detail">
+
+                        <div class="card__project-plus" id="projectDetailButton">
+                            <span class="card__project-plus-icon">+</span>
+                        </div>
+
+                        <form action="" class="card__project-form" id="projectDetailForm">
+                            <input type="text" name="" class="card__project-field" id="projectTitle" placeholder="Title" required>
+                            <input type="text" name="" class="card__project-field" id="projectDescription" placeholder="Description" required>
+                            <input type="text" name="" class="card__project-field card__project-field--margin-top" id="projectLabels" placeholder="Labels" required>
+                            <select name="cars" id="projectCategory" class="card__project-field card__project-field--margin-top" required>
+                                <option value="enCurso">En curso</option>
+                                <option value="relacionados">Relacionados</option>
+                                <option value="cerrados">Cerrados</option>
+                            </select>
+                            <button class="card__project-button card__project-button--bg-green card__project-field--margin-top" id="projectDetailSave">Guardar</button>
+                            <button class="card__project-button card__project-field--margin-top" id="projectDetailClose">Cerrar</button>
+
+
+                        </form>
+                        
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CARD PROJECTS -->
             <div class="card card--margin-top">
                 <div class="card__header">
                     <h2 class="card__header-title card__header-title--projects">PROYECTOS</h2>
@@ -256,7 +292,7 @@
                         
                         <div class="card__project-wrapper" id="card__project-wrapper">
 
-
+                            <!-- AQUÍ SE CARGAN LOS PROYECTOS -->
 
                         </div>
                         
@@ -268,6 +304,9 @@
                     <span class="card__footer-text">Ver más</span>
                 </div>
             </div>
+
+
+
         </div>
 
 
