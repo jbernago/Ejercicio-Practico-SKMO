@@ -390,8 +390,8 @@ body {
         }
 
         @media only screen and (min-width: 600px) and (max-width: 1023px) {
-             width: 50%;
-             padding: 5px 10px 30px 15px;
+            width: 50%;
+            padding: 5px 10px 30px 15px;
         }
 
         @media only screen and (min-width: 320px) and (max-width: 599px) {
@@ -825,7 +825,6 @@ body {
             position: absolute;
             right: 0;
             text-decoration: none;
-            z-index: 9999;
 
             &--edit{
                 right: 80px;
@@ -853,6 +852,10 @@ body {
             &:hover{
                 text-decoration: underline;
             }
+        }
+        .activeProject{
+            background-color: #ededed;
+            position: relative;
         }
 
 

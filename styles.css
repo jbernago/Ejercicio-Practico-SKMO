@@ -957,7 +957,6 @@ body {
   position: absolute;
   right: 0;
   text-decoration: none;
-  z-index: 9999;
 }
 
 .main .card__project-modify-link--edit {
@@ -985,6 +984,11 @@ body {
 
 .main .card__project-modify-link:hover {
   text-decoration: underline;
+}
+
+.main .card .activeProject {
+  background-color: #ededed;
+  position: relative;
 }
 
 .main .card__contactos {
