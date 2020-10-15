@@ -96,8 +96,8 @@ function loader(){
             let arrayProjects = document.querySelectorAll('.card__project');
                     
             arrayProjects.forEach((a) =>{
-                if(a.classList.contains('activeProject')){
-                    a.classList.remove('activeProject');
+                if(a.classList.contains('card__project--active')){
+                    a.classList.remove('card__project--active');
                 }
             });
         }
@@ -114,37 +114,23 @@ function loader(){
             let tabWrapper = document.querySelector('.card__tab-wrapper');
             let arrayTabs = tabWrapper.querySelectorAll('.card__tab-menu');
 
+            arrayTabs.forEach((a) => {
+                if(a.classList.contains('card__tab-menu--active')){
+                    a.classList.remove('card__tab-menu--active');
+                }
+            });
+
             switch(typeProject){
                 case 'enCurso':
-                    arrayTabs.forEach((a) => {
-                        if(a.classList.contains('card__tab-menu--active')){
-                            a.classList.remove('card__tab-menu--active');
-                        }
-                    });
                     processList.classList.add('card__tab-menu--active');
                 break;
                 case 'relacionados':
-                    arrayTabs.forEach((a) => {
-                        if(a.classList.contains('card__tab-menu--active')){
-                            a.classList.remove('card__tab-menu--active');
-                        }
-                    });
                     relList.classList.add('card__tab-menu--active');
                 break;
                 case 'cerrados':
-                    arrayTabs.forEach((a) => {
-                        if(a.classList.contains('card__tab-menu--active')){
-                            a.classList.remove('card__tab-menu--active');
-                        }
-                    });
                     closedList.classList.add('card__tab-menu--active');
                 break;
                 default:
-                    arrayTabs.forEach((a) => {
-                        if(a.classList.contains('card__tab-menu--active')){
-                            a.classList.remove('card__tab-menu--active');
-                        }
-                    });
                     allList.classList.add('card__tab-menu--active');
             }
 
@@ -161,10 +147,8 @@ function loader(){
             else{
                 projectProcess = projects;
             } 
-            
-            let i = 1;
 
-            projectProcess.forEach((a) => {
+            projectProcess.forEach((a, i) => {
 
 
                 let cardProject = document.createElement('div');
@@ -193,7 +177,7 @@ function loader(){
 
                     deleteActiveProjectClass();
 
-                    cardProject.classList.add('activeProject');
+                    cardProject.classList.add('card__project--active');
                 });
 
                     // BUTTONS EDIT & DELETE
@@ -239,9 +223,10 @@ function loader(){
                         e.preventDefault();
                         e.stopPropagation();
                         let index = projects.indexOf(a);
-                        alert('Borrar el proyecto: ' + a.title + ', que ocupa la posición: ' + index);
-                        projects.splice(index, 1);
-                        filterList(typeProject);
+                        if (confirm('Borrar el proyecto: ' + a.title + ', que ocupa la posición: ' + index)){
+                            projects.splice(index, 1);
+                            filterList(typeProject);
+                        }
                     });
 
                     // CARD__LINK
@@ -279,24 +264,6 @@ function loader(){
             projectDetailForm.style.display = 'flex';
             projectDetailButton.style.display = 'none';
         });
-
-        // function close(e){
-        //     e.preventDefault();
-        //     projectDetailForm.style.display = 'none';
-        //     projectDetailButton.style.display = 'flex';
-
-        //     projectTitle.value = '';
-        //     projectDescription.value = '';
-        //     projectLabels.value = '';
-        //     projectCategory.value = 'enCurso';
-
-        //     projectDetailSave.disabled = false;
-        //     projectDetailSave.style.cursor = 'pointer';
-        //     projectDetailSave.style.backgroundColor = '#7F950B';
-
-        //     projectDetailSave.removeAttribute('indice');
-
-        // }
 
         // BOTON CERRAR
         projectDetailClose.addEventListener('click', (e)=>{

@@ -802,6 +802,9 @@ body {
                 background-color: rgba(#ededed, 0.5);
                 cursor: pointer;
             }
+            &--active{
+                background-color: #ededed;
+            }
         }
         &__project-pills{
             display: flex;
@@ -852,10 +855,6 @@ body {
             &:hover{
                 text-decoration: underline;
             }
-        }
-        .activeProject{
-            background-color: #ededed;
-            position: relative;
         }
 
 

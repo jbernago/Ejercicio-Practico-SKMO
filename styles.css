@@ -931,6 +931,10 @@ body {
   cursor: pointer;
 }
 
+.main .card__project--active {
+  background-color: #ededed;
+}
+
 .main .card__project-pills {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -984,11 +988,6 @@ body {
 
 .main .card__project-modify-link:hover {
   text-decoration: underline;
-}
-
-.main .card .activeProject {
-  background-color: #ededed;
-  position: relative;
 }
 
 .main .card__contactos {
